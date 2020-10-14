@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ToDoList-待办事项</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="header" id="head">
+		<div class="title">
+			<header>ToDoList</header>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="add">
+			<img src="add.png" onclick="openDialog()" id="add">
+		</div>
+		<div class="dialog" id="dialog">
+			<form action="javascript:postaction()" id="form">
+				<input type="text" id="title" name="title" placeholder="添加ToDo"required="required" autocomplete="off">
+			</form>
+		</div>
+		<div class="content">
+			<h2>
+				待办事项
+				<span id="todocount">0</span>
+			</h2>
+			<div class="demo-box">
+				<ol class="todolist" id="todolist">
+					
+				</ol>
+			</div>
+
+			<h2>
+				已经完成
+				<span id="donecount">0</span>
+			</h2>
+			<div class="demo-box">
+				<ol class="donelist" id="donelist">
+					
+				</ol>
+			</div>
+			<div class="clear">
+				<a href="javascript:clear();">clear</a>
+			</div>
+		</div>	
+		
+	</div>
+
+	<div class="footer">
+		<footer>Copyright &copy; 2020 todolist.cn</footer>
+	</div>
+
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
